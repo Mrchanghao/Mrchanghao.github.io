@@ -6,10 +6,10 @@ body {
   height: 40vh;
 }
 .bg-1 {
-  background: #36b1da;
-  background: -moz-linear-gradient(left, #36b1da 0%, #29c6cd 100%);
-  background: -webkit-linear-gradient(left, #36b1da 0%, #29c6cd 100%);
-  background: linear-gradient(to right, #36b1da 0%, #29c6cd 100%);
+  background: #42275a;
+  background: -moz-linear-gradient(left, #42275a 0%, #734b6d 100%);
+  background: -webkit-linear-gradient(left, #42275a 0%, #734b6d 100%);
+  background: linear-gradient(to right, #42275a 0%, #734b6d 100%);
 }
 .pab-100px {
   padding-bottom: 100px;
@@ -63,7 +63,10 @@ body {
 }
 .content a:hover,
 .content .fake-link:hover {
-  opacity: 0.5;
+  opacity: 0.6;
+  color: #d4a453;
+  font: bold;
+  text-decoration: underline;
   transition: all 0.15s ease-in;
 }
 .content h1,
@@ -190,7 +193,7 @@ body {
 }
 @media screen and (min-width: 1400px) {
   .tags-container-vertical {
-    display: block;
+    display: none;
     position: relative;
     height: 0;
     margin-left: -10vw;
@@ -207,7 +210,7 @@ body {
 }
 @media screen and (min-width: 1400px) {
   .tags-container-bottom {
-    display: none;
+    display: block;
   }
 }
 .content figure.highlight {
