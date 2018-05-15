@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Database — 소개 (Part 1)데이터베이스, DBMS가 무엇이고 왜 사용하는지?이 글은 데이타 베이스에 관한 긴 시리즈의 학습서이다, 우리는 앞으로 아래 내용을 다룰 예정입니다.
+데이타베이스에 관한 소개(DBMS가 무엇이고 왜 사용하는지) 
+데이타베이스에 관한">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Chang Hao">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="데이터 베이스 입문 PART. 1"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Chang Hao의 Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>데이터 베이스 입문 PART. 1 - Chang Hao의 Blog</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Chang Hao의 Blog">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Chang Hao의 Blog">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/music" 
+                    title="Music">
+                    Music
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">데이터 베이스 입문 PART. 1</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-05-15</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Database-—-소개-Part-1"><a href="#Database-—-소개-Part-1" class="headerlink" title="Database — 소개 (Part 1)"></a>Database — 소개 (Part 1)</h1><h2 id="데이터베이스-DBMS가-무엇이고-왜-사용하는지"><a href="#데이터베이스-DBMS가-무엇이고-왜-사용하는지" class="headerlink" title="데이터베이스, DBMS가 무엇이고 왜 사용하는지?"></a>데이터베이스, DBMS가 무엇이고 왜 사용하는지?</h2><h3 id="이-글은-데이타-베이스에-관한-긴-시리즈의-학습서이다-우리는-앞으로-아래-내용을-다룰-예정입니다"><a href="#이-글은-데이타-베이스에-관한-긴-시리즈의-학습서이다-우리는-앞으로-아래-내용을-다룰-예정입니다" class="headerlink" title="이 글은 데이타 베이스에 관한 긴 시리즈의 학습서이다, 우리는 앞으로 아래 내용을 다룰 예정입니다."></a>이 글은 데이타 베이스에 관한 긴 시리즈의 학습서이다, 우리는 앞으로 아래 내용을 다룰 예정입니다.</h3><ul>
+<li>데이타베이스에 관한 소개(DBMS가 무엇이고 왜 사용하는지) </li>
+<li>데이타베이스에 관한 기초 </li>
+<li>데이타베이 디자인 과정 </li>
+<li>Normalization(정규화라고 해야 하나여? ㅠㅠ)</li>
+<li>SQL(the structured query language)</li>
+<li>Indexing, transaction &amp; stored procedures. </li>
+<li>데이타 베이스의 서로 다른 종류들</li>
+</ul>
+<hr>
+<p> 데이타베이스(이후 부턴 DB라고 부르겠습니다)를 공부하기 전에 DB가 제공하는 기능 대신에 문제를 해결하기 위해 DB가 필요한 이유부터 시작하겠습니다. “그래서, 이 문제들은 무엇인가요?”</p>
+<h1 id="왜-우리는-DB가-필요한가"><a href="#왜-우리는-DB가-필요한가" class="headerlink" title="왜 우리는 DB가 필요한가?"></a>왜 우리는 DB가 필요한가?</h1><p>  우리에게 어떠한 데이타들이 있을때, 그리고 이 데이타들을 어딘가에 저장하고 싶을때. 이 데이타들은 어떠한 것도 될 수 있습니다. 이 데이타들은 고객들에 관한 것도 될 수 있고, 상품, 종업원, 고객주문 상황 등 무수한 데이타들이 있을 수 있고 이 데이타들은 텍스트 형식이나, 숫자, 날짜, 다큐먼트 파일, 사진, 오디오나 심지어 비디오 형식으로도 존재 할수 있습니다.</p>
+<p>  아마도 여러분이 여러분의 회사의 고객정보 데이타를 가지고 있다고 했을 때 처음 떠오르는 것은 스프레드 시트를 열고, 저장하려는 데이터를 무엇이는 작성하는 것입니다. </p>
+<p>  거기에는 고객들의 이름과 아이디, 위치 등이 있을 테고, 여러분은 거기에 고객정보를 추가로 작성할 것입니다. 후에는 데이터 중 어떤 것들은 지우거나 그것들을 심지어 고칠 수도 있고요. </p>
+<p>  이젠 여러분이 만족하는 방식으로 스프레드 시트에 데이타가 저장되었습니다. 그걸로 되었을 수도 있습니다. 하지만 그냥 데이타만 가지고 있는 것으로는 DB를 필요로 하기 불충분 하다고 할 수 있습니다. 문제는 그 다음입니다. 엄청나게 많은 잠재적 문제점들이 산재해 있습니다. </p>
+<p>  만약에 엄청나게 많은 데이타들을 가지고 있다 가정한다면, 예를 들어 1만명의 고객정보라고 해봅시다. “여러분은 스프레드 시트에서 9999명의 고객을 찾기 위해 스크롤을 계속 이동 하시겠습니까?!”, 만약에 보안도 걱정이라면, “다른 누군가가 당신의 데이타에 액세스 할 수 있다면 신경이 쓰이지 않으시겠습니까?”, 만약에 실수로 중복정보를 입력한다면요? “스프레드시트에 정보가 복사되도 괜찮나여?”</p>
+<p>   이 문제점들은 우리에게 다음과 같은 질문을 던집니다. “언제 우리가 실제로 데이타베이스가 필요한가?”<br>   아래의 잠재적 문제점들을 고려해 보세요: </p>
+<h2 id="Size"><a href="#Size" class="headerlink" title="Size"></a>Size</h2><p>   여러분이 수천명 아니 수백만명의 고객이나 정보를 가지고 있을 수 있습니다. </p>
+<h2 id="Accuracy-정밀도"><a href="#Accuracy-정밀도" class="headerlink" title="Accuracy(정밀도)"></a>Accuracy(정밀도)</h2><p>   만약 누군가가 정확하지 않은 데이타를 입력했다면? 만약 그렇다면 실제로 아무것도 스프레드 시트에 잘못된 데이터를 입력하지 못하게 할 수 있습니다. </p>
+<h2 id="security-보안"><a href="#security-보안" class="headerlink" title="security(보안)"></a>security(보안)</h2><p>   만약 민감한 데이터라면 여러분은 데이터 접근에 제한을 둘 필요가 있습니다; 그리고 그걸 누구와도 공유할 필요가 없습니다. 게다가 “누군가가 데이터에 변화를 줄 때마다 그걸 여러분이 알아야 할 필요가 있나요?”</p>
+<h2 id="redundancy-중복성"><a href="#redundancy-중복성" class="headerlink" title="redundancy(중복성)"></a>redundancy(중복성)</h2><p>   만약 데이터가 중복된 거라면 충돌이 날 수도 있고, 여러분은 반복되지 않은 하나의 데이터만 필요할 뿐입니다. </p>
+<h2 id="importance-중요성"><a href="#importance-중요성" class="headerlink" title="importance(중요성)"></a>importance(중요성)</h2><p>   “만약 통신연결이 끊어지거나 충돌로 인하여 데이터를 잃어버린다면?” 여러분은 아마 고통을 느껴봤을 것입니다. 그리고 중요한 데이터를 잃어버리는 건 말이 안 됩니다.  예를 들어 고객의 오더나 환자들의 알레르기 기록, 비행기 예약 등을 말이다. </p>
+<h2 id="overwriting-덮어쓰기"><a href="#overwriting-덮어쓰기" class="headerlink" title="overwriting(덮어쓰기)"></a>overwriting(덮어쓰기)</h2><h2 id="한명이-넘는-사람들이-같은-데이터를-같은-시각에-덮어-쓴다면-어떨까-10명이나-100명이-같은-시각에에-말이다-아마-모든-사람이-다른-사람들의-변경-사람들을-덮어쓰게-될-것이다"><a href="#한명이-넘는-사람들이-같은-데이터를-같은-시각에-덮어-쓴다면-어떨까-10명이나-100명이-같은-시각에에-말이다-아마-모든-사람이-다른-사람들의-변경-사람들을-덮어쓰게-될-것이다" class="headerlink" title="   한명이 넘는 사람들이 같은 데이터를 같은 시각에 덮어 쓴다면 어떨까? 10명이나 100명이 같은 시각에에 말이다. 아마 모든 사람이 다른 사람들의 변경 사람들을 덮어쓰게 될 것이다. "></a>   한명이 넘는 사람들이 같은 데이터를 같은 시각에 덮어 쓴다면 어떨까? 10명이나 100명이 같은 시각에에 말이다. 아마 모든 사람이 다른 사람들의 변경 사람들을 덮어쓰게 될 것이다. </h2><p>   이런 문제들 증 하나라도 <em>‘YES!</em> 라고 대답했다면 데이터를 신뢰할 수 있고 안전하게 유지 보수 할 수 있어야 합니다. 따라서 데이터 베이스가 있어야 한고 이것이 우리가 여기서 알아 볼 내용들입니다.  </p>
+<h1 id="무엇이-데이터베이스-DB-인가"><a href="#무엇이-데이터베이스-DB-인가" class="headerlink" title="무엇이 데이터베이스(DB)인가?"></a>무엇이 데이터베이스(DB)인가?</h1><p>   여러분의 문제점의 중요성에 따라 달라지기 떄문에 데이터에 규칙을 주고 데이터를 저장하는 구조화된 시스템입니다. 만약에 문제점이 사이즈라면 다른 누군가는 민감한 데이터를 문제점으로 가지고 있을 수 있습니다. </p>
+<p>   이것들은 백그라운드에선 볼수 없는 것 들입니다.; 보안, 완전히 보전된 데이터, 빠르고 안정적으로 접근 할 수 있는 능력, 견고성; 동시에 많은 사람들에게 서비스를 제공하고 심지어 데이터를 손상시키지 않고 충돌 및 하드웨어 문제를 올바르게 해결할 수 있습니다. </p>
+<p>   그리고 우리가 여기서 필요로 하는 것은; 우리 데이터 구조를 이해하고 이 규칙들을 설명하고, 이 모든 보이지 않는 것들이 실제로 일어 난다는 것입니다. </p>
+<h1 id="Database-Management-System-DBMS"><a href="#Database-Management-System-DBMS" class="headerlink" title="Database Management System(DBMS)"></a>Database Management System(DBMS)</h1><p>   우리는 자주 DB들을 실수로 Oracle, MySQL, SQL Server, MongoDB라고 부르곤 합니다.<br>   하지만 이것들은 DB가 아니 DBMS라고 불러야 합니다. </p>
+<p>   DBMS는 우리 개인 컴퓨터나 서버에 설치한 소프트웨어이고 그러고 나서 여러분이 하나 이상의 DB를 핸들링 하는데 사용됩니다. </p>
+<p>   DB는 실제 데이터와 데이터에 대한 규칙들을 가지고 있고 반면 DBMS는 우리 실제 데이터들을 매니징 하거나 데이터들을 둘러 싸는 프로그램입니다. 그리고 DBMS는 데이터에 여러분이 스펙으로 정한 일들을 하게 합니다. 예를 들어 데이터 타입이 스트링 타입인지 아닌지 아니면 데이터들간의 관계를 판단하는 일들 일 수 있습니다. </p>
+<p>   실제로는 여러 데이터베이스를 가지는 것이 일반적입니다. 주문과 고객정보를 다루는 DB는 HR 정보를 다루는 DB와는 완전히 독립적일 수 있습니다. 그리고 많은 조직에서 여러 DB를 가지지 않고 여러 DBMS를 가지고 있습니다. 때때로 하나의 DBMS가 다른 것들 보다 나은 점이 있기 때문입니다(??) </p>
+<p>   여러 DBMS가 있고 아래와 같이 분류 할 수 있습니다. </p>
+<ul>
+<li>관계형 DBMS(relational DBMS)</li>
+<li>Hierarchical DBMS</li>
+<li>Network DBMS</li>
+<li>Object-Orient DBMS</li>
+<li><p>NoSQL DBMS</p>
+<p>우리는 관계형 DBMS에 집중을 해 보려고 한다 왜?? </p>
+</li>
+<li><p>제일 일반적으로 많이 쓰인다. </p>
+</li>
+<li>우리가 여기에서 이야기할 원리들이 대부분의 플랫폼에 걸쳐서 사용 가능합니다. </li>
+<li><p>만약 바로 NoSQL Database 분야로 뛰어든다면 대부분 당신이 관계형 DB의 개념을 이해하고 있다고 있다고 가정하고 이러한 개념들을 사용하여 NoSQL database가 제공하는 것들을 설명한다.  (????)</p>
+<blockquote>
+<p>RDMS는 Oracle, MySQL, SQL Server, SQLite, DB2, … 등등이 있습니다</p>
+</blockquote>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>이제 우리가 왜 DB가 필요하고, DB가 무엇인지, 그리고 DBMS와 DB와의 차이점을 이해 했을것입니다.<br>이제 다음 글에서  database 기초를 시작 하겠습니다. </p>
+<blockquote>
+<p>이글은 Omar El Gabry의 Medium Blog 글을 번역한 것으로 데이터베이스 튜토리얼 시리즈증  첫번째 글입니다. 상당한 오역과 의역이 난무하니 고칠 점이 있다면 메일로 연락 주시면 감사하겠습니다… 가능한 빨리 번역을 하고 올리 도록 하겠습니다..ㅎㅎ</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>   <a href="https://medium.com/omarelgabrys-blog/database-introduction-part-1-4844fada1fb0" target="_blank" rel="noopener">원문</a></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+
+                    <!-- Comments -->
+                    
+<div id="disqus_thread" class="mt5">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Chang Hao">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2018/05/15/database-1/">데이터 베이스 입문 PART. 1</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/14/recursive/">재귀 함수와 성능</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/04/test-file/">테스트 파일</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/Mrchanghao" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:lnl2048@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = '이창호';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>
