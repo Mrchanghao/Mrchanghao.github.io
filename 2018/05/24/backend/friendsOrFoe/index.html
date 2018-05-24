@@ -10,8 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="피보나찌 수열수열의 일종으로 0과 1로 시작하며 앞의 두수의 합이 그 다음 수가 되는 수열을 말한다. 개발자들은 fizzbuzz 문제 다음으로 아마 가장 많이 접하는 문제 일것 같다. 
-가장 쉬운 해법은 재귀함수를 이용한 방법이 있다. 재귀함수에 대해서는 앞전의 포스트">
+        <meta name="description" content="오늘의 CodeWarfriend or Foe문제 라는데 문제 의 기본은 이렇다 string 타입 모음으로 된 리스트 어레이가 인수로 들어가고  이 어레이의  elements들 string 이 4글자면 새로운 어레이에 추가하고 아니면 버리는 함수를 만드는 알고리즘 문제이">
     
 
     <!--Author-->
@@ -21,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="피보나찌 수열"/>
+        <meta property="og:title" content="friendsOrfoe"/>
     
 
     <!--Open Graph Description-->
@@ -43,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>피보나찌 수열 - Chang Hao의 Blog</title>
+    <title>friendsOrfoe - Chang Hao의 Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -111,8 +110,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">피보나찌 수열</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-05-17</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">friendsOrfoe</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-05-24</p>
         </div>
     </div>
 
@@ -138,15 +137,14 @@
                     
 
                     <!-- Main Post Content -->
-                    <h1 id="피보나찌-수열"><a href="#피보나찌-수열" class="headerlink" title="피보나찌 수열"></a>피보나찌 수열</h1><p>수열의 일종으로 0과 1로 시작하며 앞의 두수의 합이 그 다음 수가 되는 수열을 말한다. 개발자들은 fizzbuzz 문제 다음으로 아마 가장 많이 접하는 문제 일것 같다. </p>
-<p>가장 쉬운 해법은 재귀함수를 이용한 방법이 있다. 재귀함수에 대해서는 앞전의 <a href="https://mrchanghao.github.io/2018/05/14/backend/recursive/">포스트</a>에서 설명 하였으니 넘어가기로 하고 오늘 내가 이 포스트를 작성하는 이유는 외국 코딩 인터뷰 사이트를 보다가 일반적이지 않은 해법이 나와서<br>그 방법을 정리하고 테스트 해보고 싶어서 이다. </p>
-<p>역시 개발자들은 언제나 공부하고 더 좋은 답을 찾기 위해 노력해야 한다는 걸 이 코드를 보고 느꼈다. </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fib</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'index가 음수이다'</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(n === <span class="number">0</span> || n === <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125; </span><br><span class="line">        <span class="keyword">var</span> prevPrev = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">var</span> prev = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">var</span> current;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            current = prev + prevPrev;</span><br><span class="line">            prevPrev = prev;</span><br><span class="line">            prev = current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> current;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>아래는 테스트 결과다 </p>
-<ul>
-<li>위 코드의 테스트 결과<br><img src="/images/fib.png" alt="test result"></li>
-<li>재귀함수의 테스트 결과<br><img src="/images/recursive.png" alt="testresult"><br>테스트는 두개 모두 통과지만 맨 마지막 fib(15)의 계산이 나오는 시간의 수준이 현저하게 재귀 함수보다 빠르다. 다시금 느꼈다 재귀함수는 그냥 편하기만 하다는 걸…. </li>
-</ul>
+                    <h1 id="오늘의-CodeWar"><a href="#오늘의-CodeWar" class="headerlink" title="오늘의 CodeWar"></a>오늘의 CodeWar</h1><p>friend or Foe문제 라는데 문제 의 기본은 이렇다 string 타입 모음으로 된 리스트 어레이가 인수로 들어가고  이 어레이의  elements들 string 이 4글자면 새로운 어레이에 추가하고 아니면 버리는 함수를 만드는 알고리즘 문제이다. 오늘의 문제는 운 좋게도 좀 쉬운 문제가 걸렸다. 며칠 codewar에 도전하면서 느낀 바로는 좀 내 수준에 안 맞는 문제들을 많이 스킵하면 포기 하지 말고 용기 얻으라고 쉬운 문제를 냉큼 던져 주는거 같다. 하지만 쫌심 상한다고 어케 눈 앞에 있는 문제를 버릴까. 부끄러우면서도 그냥 풀었다. </p>
+<p>일반적인 input output 구조는 아래와 같다.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">input: [&apos;kyra&apos;, &apos;mark&apos;, &apos;kieren&apos;]  -&gt; output: [&apos;kyra&apos;, &apos;mark&apos;]</span><br></pre></td></tr></table></figure></p>
+<p>내가 푼 방식은 아래와 같다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">friend</span>(<span class="params">friends</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//your code here</span></span><br><span class="line">  <span class="keyword">var</span> arr = [];</span><br><span class="line">  <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; friends.length; i++) &#123;</span><br><span class="line">    friends[i].length === <span class="number">4</span> ? arr.push(friends[i]) : arr;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>새 어레이를 만들고 인수로 주어진 friends 어레이를 for문으로 돌리면서 friends 어레이의 element의 length를 검증하고 만약 4글자면 새 어레이에 push하고 for문이 종료되면 새 어레이를 리턴한다. </p>
+<p>다른 똑똑한 분들의 풀이법<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">friend</span>(<span class="params">friends</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> friends.filter(<span class="function"><span class="params">n</span> =&gt;</span> n.length === <span class="number">4</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>역시 codewar의 장단점은 이거다 내가 문제를 풀고 테스트까지 통과하면 기분이 좋다 하지만 다른 천재들의 풀이법을 보면 난 왜 이 생각을 못 했을까 하는 생각이 든다는 것이다.<br>아 react 공부하면서 filter를 그렇게 많이 사용했는데 생각도 못 했다. 일단 jest로 테스트 코드 한번 작성해보고 이 두문제의 퍼포먼스를 한번 비교해 보고 싶다. </p>
 
                     
                     <!-- Tags Bottom -->
