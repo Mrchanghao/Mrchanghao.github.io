@@ -10,7 +10,8 @@
 
     <!--Description-->
     
-        <meta name="description" content="오늘의 CodeWarfriend or Foe문제 라는데 문제 의 기본은 이렇다 string 타입 모음으로 된 리스트 어레이가 인수로 들어가고  이 어레이의  elements들 string 이 4글자면 새로운 어레이에 추가하고 아니면 버리는 함수를 만드는 알고리즘 문제이">
+        <meta name="description" content="오늘의 코드워코드워에서 메일로 문제가 와서 심심해서 풀어봤다. 역시 코드워의 인공지능님이 내 수준을 헤아려 주셔서 그런지 어려운 문제가 오지 않아 쉽게 풀 수 있는 문제였다. 
+어레이의 숫자들 중에 양수들의 합만 구하는 문제였다. 뭐 이거야 if문과 for문만 돌리면 ">
     
 
     <!--Author-->
@@ -20,7 +21,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="friendsOrfoe"/>
+        <meta property="og:title" content="PositiveSum array"/>
     
 
     <!--Open Graph Description-->
@@ -42,7 +43,7 @@
 
     <!-- Title -->
     
-    <title>friendsOrfoe - Chang Hao의 Blog</title>
+    <title>PositiveSum array - Chang Hao의 Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -110,8 +111,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">friendsOrfoe</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-05-24</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">PositiveSum array</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-05-26</p>
         </div>
     </div>
 
@@ -137,14 +138,16 @@
                     
 
                     <!-- Main Post Content -->
-                    <h1 id="오늘의-CodeWar"><a href="#오늘의-CodeWar" class="headerlink" title="오늘의 CodeWar"></a>오늘의 CodeWar</h1><p>friend or Foe문제 라는데 문제 의 기본은 이렇다 string 타입 모음으로 된 리스트 어레이가 인수로 들어가고  이 어레이의  elements들 string 이 4글자면 새로운 어레이에 추가하고 아니면 버리는 함수를 만드는 알고리즘 문제이다. 오늘의 문제는 운 좋게도 좀 쉬운 문제가 걸렸다. 며칠 codewar에 도전하면서 느낀 바로는 좀 내 수준에 안 맞는 문제들을 많이 스킵하면 포기 하지 말고 용기 얻으라고 쉬운 문제를 냉큼 던져 주는거 같다. 하지만 쫌심 상한다고 어케 눈 앞에 있는 문제를 버릴까. 부끄러우면서도 그냥 풀었다. </p>
-<p>일반적인 input output 구조는 아래와 같다.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">input: [&apos;kyra&apos;, &apos;mark&apos;, &apos;kieren&apos;]  -&gt; output: [&apos;kyra&apos;, &apos;mark&apos;]</span><br></pre></td></tr></table></figure></p>
-<p>내가 푼 방식은 아래와 같다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">friend</span>(<span class="params">friends</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//your code here</span></span><br><span class="line">  <span class="keyword">var</span> arr = [];</span><br><span class="line">  <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; friends.length; i++) &#123;</span><br><span class="line">    friends[i].length === <span class="number">4</span> ? arr.push(friends[i]) : arr;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>새 어레이를 만들고 인수로 주어진 friends 어레이를 for문으로 돌리면서 friends 어레이의 element의 length를 검증하고 만약 4글자면 새 어레이에 push하고 for문이 종료되면 새 어레이를 리턴한다. </p>
-<p>다른 똑똑한 분들의 풀이법<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">friend</span>(<span class="params">friends</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> friends.filter(<span class="function"><span class="params">n</span> =&gt;</span> n.length === <span class="number">4</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>역시 codewar의 장단점은 이거다 내가 문제를 풀고 테스트까지 통과하면 기분이 좋다 하지만 다른 천재들의 풀이법을 보면 난 왜 이 생각을 못 했을까 하는 생각이 든다는 것이다.<br>아 react 공부하면서 filter를 그렇게 많이 사용했는데 생각도 못 했다. 일단 jest로 테스트 코드 한번 작성해보고 이 두문제의 퍼포먼스를 한번 비교해 보고 싶다. </p>
+                    <h1 id="오늘의-코드워"><a href="#오늘의-코드워" class="headerlink" title="오늘의 코드워"></a>오늘의 코드워</h1><p>코드워에서 메일로 문제가 와서 심심해서 풀어봤다. 역시 코드워의 인공지능님이 내 수준을 헤아려 주셔서 그런지 어려운 문제가 오지 않아 쉽게 풀 수 있는 문제였다. </p>
+<p>어레이의 숫자들 중에 양수들의 합만 구하는 문제였다. 뭐 이거야 if문과 for문만 돌리면 금방이니까 알고리즘 코드는 금방 짤 수 있겠다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">positiveSum</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> total = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i, l = arr.length; i &lt; l; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[i] &gt;= <span class="number">0</span> ) </span><br><span class="line">        total += arr[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> total;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>코드워에서 샘플 테스트를 실행 해 보니 금방 통과 완료!! </p>
+<p>바로 제출 했다. </p>
+<h2 id="천재들의-코드"><a href="#천재들의-코드" class="headerlink" title="천재들의 코드"></a>천재들의 코드</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">positiveSum</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">return</span> arr.reduce(<span class="function">(<span class="params">a,b</span>)=&gt;</span> a + (b &gt; <span class="number">0</span> ? b : <span class="number">0</span>),<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">positiveSum</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.filter(<span class="function"><span class="params">x</span> =&gt;</span> x&gt;=<span class="number">0</span>).reduce(<span class="function">(<span class="params">a, c</span>) =&gt;</span> a + c, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>사실 처음에는 나도 reduce를 사용 해 볼까 했는데 그러려면 사실 시간이 더 오래 걸릴 것 같아서 그냥 for문을 이용했다..ㅋㅋㅋ (핑계가 아니고 지금 나갈 준비 해야 하는데 블로그 쓰고 있는 중….) </p>
+<p>오잉? 필터는 생각 못 했다… reduce 함수 블록 안에서만 어케 할 까 고민햇는데… 먼저 filter로 새 어레이 만들고 그 안에서 작업하는게 더 효율적이겠구나… </p>
+<p>역시나 천재분들의 코드를 리뷰하면 많은 점을 배울 수 있다.. 그런데 써 먹질 못한다. 아오… .</p>
+<p>일단 map, filter, reduce에 익숙해져야 하겠다. </p>
+<h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>일단 알고리즘 문제들을 푸는 것은 즐겁고 익숙 해지기 시작했는데 시간복잡도나 공간 복잡도에 대한 개념 자체는 블로그 글들을 읽어봐도 영 감이 잡히지 않는다. 결국, 비전공자의 약점이 이런 것인가….<br>틈틈이 알고리즘 개념에 대한 공부 하면서 자료 수집하고 글로 정리를 해야 되겠다. </p>
 
                     
                     <!-- Tags Bottom -->
