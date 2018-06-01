@@ -10,8 +10,8 @@
 
     <!--Description-->
     
-        <meta name="description" content="내가 사용하는 플러그인들 소개고생해서 만든 블로그라 그런지 엄청 정도 가고 계속 무언가 써서 올리고 싶다는 생각이 들고 있는 중이다. 실력도 없는 초보 주제에 먼 글을 쓰겠다는 건지… 욕심만 많아 가지고..ㅎㅎ 
-그래서 오널은 나 같은 초보가 충분히 공감할 만한 블로그">
+        <meta name="description" content="vowels count오늘의 코드워는 사실 예전에 풀어 봤던 문제였다. 그런데도 불구하고 사실 어떻게 풀지 고민을 오래 해서 조금 가슴이 뜨끔했던 문제 이기도 하다. 
+123456function getCount(str) &amp;#123;    var vowelsCount =">
     
 
     <!--Author-->
@@ -21,7 +21,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="HEXO 블로그 플러그인"/>
+        <meta property="og:title" content="vowels_count"/>
     
 
     <!--Open Graph Description-->
@@ -43,7 +43,7 @@
 
     <!-- Title -->
     
-    <title>HEXO 블로그 플러그인 - Chang Hao의 Blog</title>
+    <title>vowels_count - Chang Hao의 Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -111,8 +111,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">HEXO 블로그 플러그인</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-05-16</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">vowels_count</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-06-02</p>
         </div>
     </div>
 
@@ -132,37 +132,26 @@
                     
                         <div class="tags-container-vertical">
                             <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/frontend/">#frontend</a>
+                                <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
                             </div>
                         </div>
                     
 
                     <!-- Main Post Content -->
-                    <h1 id="내가-사용하는-플러그인들-소개"><a href="#내가-사용하는-플러그인들-소개" class="headerlink" title="내가 사용하는 플러그인들 소개"></a>내가 사용하는 플러그인들 소개</h1><p>고생해서 만든 블로그라 그런지 엄청 정도 가고 계속 무언가 써서 올리고 싶다는 생각이 들고 있는 중이다. 실력도 없는 초보 주제에 먼 글을 쓰겠다는 건지… 욕심만 많아 가지고..ㅎㅎ </p>
-<p>그래서 오널은 나 같은 초보가 충분히 공감할 만한 블로그 관리 자체에 대한 이야기를 해보려고 한다. </p>
-<h1 id="플러그인"><a href="#플러그인" class="headerlink" title="플러그인"></a>플러그인</h1><h2 id="Block-Quote"><a href="#Block-Quote" class="headerlink" title="Block Quote"></a>Block Quote</h2><hr>
-<p>인용구나 책인용, 트위터 인용에 많이 사용한다 일반적으로 마크다운 문법의 &gt;…. 과 비슷하지만 무언가 더 있어보이는 효과가 있다.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 사용법</span><br><span class="line">&#123;% blockquote 손자(원작자), 손자병법(참조) %&#125;</span><br><span class="line">적을 알고 나를 알면 백전 백승이다.....</span><br><span class="line">&#123;% endblockquote%&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote><p>적을 알고 나를 알면 백전 백승이다…..</p>
-<footer><strong>손자(원작자)</strong><cite>손자병법</cite></footer></blockquote>
-<blockquote><p>The reason English is used so much in computers is because this rich language allows for the creation of so many damn acronyms.</p>
-<footer><strong>@climagic</strong><cite><a href="https://twitter.com/climagic/status/633643481081249792" target="_blank" rel="noopener">twitter.com/climagic/status/633643481081249792</a></cite></footer></blockquote>
-<h2 id="codepen-demo"><a href="#codepen-demo" class="headerlink" title="codepen demo"></a>codepen demo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 설치</span><br><span class="line">npm install hexo-codepen --save</span><br><span class="line">&#123;% codepen userId slugHash theme [defaultTab [height [width]]] %&#125;</span><br></pre></td></tr></table></figure>
-<iframe id="cp_embed_OjPwmL" src="//codepen.io/Colt/embed/OjPwmL?height=300&theme-id=Default&slug-hash=OjPwmL&default-tab=result" scrolling="no" frameborder="no" height="300" allowtransparency="true" allowfullscreen="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe>
-<p>물론 코드펜 말고 jsfiddle 또는 gist로도 가능하다 </p>
-<h2 id="soundCloud"><a href="#soundCloud" class="headerlink" title="soundCloud"></a>soundCloud</h2><p>사실 가장 끌렸다. 블로그를 만들면서 따로 음악 공간을 만들 정도로 일렉음악에 관심이 많은데  명곡들을 포스팅 하고 싶었다. 특히 우리나라에서는 일렉음악이 그냥 클럽음악으로만 치부되는 게 너무 싫은 내 자신으로서는 특히 더 마음에 드는 기능 이다.  </p>
-<blockquote>
-<p>npm install –save hexo-tag-soundcloud </p>
-</blockquote>
- <div class="soundcloud-wrapper"><iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fmonoverse%2Faly-fila-with-haliene-breathe-us-to-life-monoverse-remix-fsoe-parallels&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div>
-<h2 id="youtube"><a href="#youtube" class="headerlink" title="youtube"></a>youtube</h2><p> 유툽도 그냥 url 정도로 여겼는데 url에서 뒤쪽 id를 따로 떼줘야 한다. 아이디가 없으면 태그 자체는 불러 올 수 있지만 영상 소스를 불러 오지는 못 한다. url이 아니라 재생 id이다.<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube 재생id [width] [height] %&#125;</span><br></pre></td></tr></table></figure></p>
- <div class="video-container"><iframe src="//www.youtube.com/embed/yEbrvMljMCg" frameborder="0" allowfullscreen></iframe></div>
-<h2 id="정리하며"><a href="#정리하며" class="headerlink" title="정리하며"></a>정리하며</h2><p> 사실 더 많은 플러그인이 있고 더 많이 설치를 해봤다. 그런데 로컬로 실행만 해봤을 뿐이데 마크다운 문법이 깨지거나 갑자기 다른 플러그인이 실행이 안 되는 경우들도 많아서 난 정보 공유와 내 공부 목적으로 하는 블로그에서는 이 정도 플러그인 정도면 만족한다. 그리고 내부 코드블록의 백그라운드와 color를 바꿨다.<br> 이건 플러그인이 아니라 테마 폴더의 소스를 건드려야 해서 조금 조마조마 했지만 그래도 나름 내 생각 대로 나와서 다행이다. 다음에는 폰트를 변경해봐야 겠다. </p>
+                    <h1 id="vowels-count"><a href="#vowels-count" class="headerlink" title="vowels count"></a>vowels count</h1><p>오늘의 코드워는 사실 예전에 풀어 봤던 문제였다. 그런데도 불구하고 사실 어떻게 풀지 고민을 오래 해서 조금 가슴이 뜨끔했던 문제 이기도 하다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCount</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> vowelsCount = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// code below</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> vowelsCount;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>정해진 문자열을 인자로 받고 그 문자열에 포함된 영어 모음들의 숫자 갯수를 구하는 문제이다. 이건 사실 ES6 문법을 쓰면 아주 쉽게 구할 수 있다. 물론 정규표현식을 쓰면 한줄로도 가능하다. 하지만 난 아직도 정규 표현식을 어떻게 써야 하는지 가늠이 안 간다. 물론 메서드들은 충분히 이해가 가지만 직접 정규표현식을 작성하는게 너무 어렵다…. </p>
+<p>일단 반복문을 이용하여 구한 방법이다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCount</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> vowelsCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> vowels = [<span class="string">'a'</span>, <span class="string">'e'</span>, <span class="string">'i'</span>, <span class="string">'o'</span>, <span class="string">'u'</span>, <span class="string">'A'</span>, <span class="string">'E'</span>, <span class="string">'I'</span>, <span class="string">'O'</span>, <span class="string">'U'</span>]</span><br><span class="line">    <span class="comment">// 대문자 도 포함해야 하기 때문에 모음 문자 배열에 대문자도 임의로 포함시킨다.</span></span><br><span class="line">    <span class="comment">// for of 문을 사용한다</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> c <span class="keyword">of</span> str.toLowerCase()) &#123;</span><br><span class="line">        <span class="keyword">if</span>(vowels.includes(c)) &#123;</span><br><span class="line">            vowelsCount++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> vowelsCount;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>위 방식이 내가 푼 방식이다. 물론 다른 방식들을 천재분들이 많이 제시해 주셨다. 역시 가장 쉬운 방법은 정규표현식이였다 .</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCount</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (str.match(<span class="regexp">/[aeiou]/g</span>) || []).length</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>난 사실 아래 방식이 더 마음에 들었다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCount</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> str.split(<span class="string">''</span>).filter(<span class="function"><span class="params">c</span> =&gt;</span> <span class="string">"aeiouAEIOU"</span>.includes(c)).length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>사실 예전에 풀어 봤던 문제여서 블로그에 정리를 하긴 그랬지만 일단 문제를 푸는데 시간이 너무 오래 걸렸다…<br>결국 나같은 비전공자에 조금 수학적 머리가 없는 사람에겐 이런 방식이 젤로 좋을 듯하다. 풀고 또 풀고 코드의 작동 방식을 이해해야 지만 완전히 내가 푼 문제가 되는 것 같다.<br>사실 테스트 코드도 작성해야 하는데 … 내 게으름증이 시작되서 오늘은 문제 푸는 걸로 만족해야 겠다. </p>
 
                     
                     <!-- Tags Bottom -->
                     
                         <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/frontend/">#frontend</a>
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
                         </div>
                     
 
