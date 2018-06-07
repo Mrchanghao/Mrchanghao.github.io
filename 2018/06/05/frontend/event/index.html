@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="자바스크립트의 이벤트에 관하여브라우저로 표시되는 페이지 상에서는 다양한 이벤트가 발생한다. 
+
+버튼이 (더블)클릭 되었다. 
+마우스 포인터가 문자열 위에 있다(벗어 났다)
+텍스트 박스의 내용이 변경
+
+클라이언트 측 자바스크립트에서는 해당 이벤트에 따라 실행 되는 코드를">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Chang Hao">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="javascript  이벤트"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Chang Hao의 Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>javascript  이벤트 - Chang Hao의 Blog</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Chang Hao의 Blog">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Chang Hao의 Blog">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/frontend" 
+                    title="frontend">
+                    frontend
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/backend" 
+                    title="backend">
+                    backend
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/Music" 
+                    title="Music">
+                    Music
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">javascript  이벤트</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-06-05</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/frontend/">#frontend</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="자바스크립트의-이벤트에-관하여"><a href="#자바스크립트의-이벤트에-관하여" class="headerlink" title="자바스크립트의 이벤트에 관하여"></a>자바스크립트의 이벤트에 관하여</h1><p>브라우저로 표시되는 페이지 상에서는 다양한 이벤트가 발생한다. </p>
+<ul>
+<li>버튼이 (더블)클릭 되었다. </li>
+<li>마우스 포인터가 문자열 위에 있다(벗어 났다)</li>
+<li>텍스트 박스의 내용이 변경</li>
+</ul>
+<p>클라이언트 측 자바스크립트에서는 해당 이벤트에 따라 실행 되는 코드를 작성하는 것이 특징이고 이런 모델을 이벤트 드리븐 모델이라고 부른다. 이런 많은 이벤트들에 대응해 그 처리 내용을 정의하는 함수를 이벤트 핸들러라고 한다. </p>
+<p>자바스크립트에는 많은 이벤트가 있으며 아래 참조 사이트에 정리가 잘 되어 있으니 참조 가능하능하다.<br><a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank" rel="noopener">은혜로우신 MDN님</a></p>
+<h1 id="이벤트-리스너-정의-하기"><a href="#이벤트-리스너-정의-하기" class="headerlink" title="이벤트 리스너 정의 하기"></a>이벤트 리스너 정의 하기</h1><p>결국 중요한 것은 세가지다. </p>
+<ul>
+<li>어느 요소에서 발생하는지</li>
+<li>어떤 이벤트를? </li>
+<li>어떻게 연관 시킬 것인지</li>
+</ul>
+<p>자바스크립트에서는 이벤트를 정의하기 위해  몇 가지 방법을 제공하고 있다. </p>
+<ol>
+<li>HTML 태그내의 속성으로 선언하기</li>
+<li>요소 객체의 속성으로 선언</li>
+<li><code>addEventListener</code> 메서드 사용</li>
+</ol>
+<p>현재는 거의 3번의 방법을 많이 사용한다. 게다가 동일한 요소/ 동일한 이벤트에 여러 이벤트 핸들러를 연결 시킬 수 없다는 단점이 있기도 하므로 여기서는 3번의 방법만 사용한다. </p>
+<blockquote>
+<p>element.addEventListener(event_type, listener) </p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"입력하세여 제발"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'input'</span>).addEventListener(<span class="string">'click'</span>, (e) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target.value)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>이벤트 핸들러를 이용해서 input 태그의 value 값을 가져왔다.</p>
+<h1 id="이벤트-버블링-이벤트-위임"><a href="#이벤트-버블링-이벤트-위임" class="headerlink" title="이벤트 버블링, 이벤트 위임"></a>이벤트 버블링, 이벤트 위임</h1><h2 id="이벤트-버블링"><a href="#이벤트-버블링" class="headerlink" title="이벤트 버블링"></a>이벤트 버블링</h2><p>이벤트 버블링이란 특정 화면 요소에 이벤트가 발생하면 해당 이벤트의 상위 화면 요소로 전달 되는 특성을 의미한다.<br><img src="/images/event_bubble.png" alt="이벤트 버블링"><br>사진은 가장 아래 요소인 스트롱 태그에 이벤트가 전달되면 그 위의 요소인  td 태그로 이벤트가 전달되고 가장 상위 태그인 table 태그로 전달 되는 이벤트 버블링 현상을 보여 준다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"td3"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"td2"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"td1"</span>&gt;</span></span><br><span class="line">            sdj</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> divs = <span class="built_in">document</span>.querySelectorAll(<span class="string">'div'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbling</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.currentTarget.className);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">divs.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">div</span>) </span>&#123;</span><br><span class="line">  div.addEventListener(<span class="string">'click'</span>, bubbling);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>위의 코드를 실행하면  아래 값을 얻는다.<br><img src="/images/codepen_result.png" alt="codepen 실행결과"><br>하나의 엘리먼트만 클릭 했을 뿐인데 이벤트 버블링으로 인하여 다른 엘리먼트들의 클래스들 값도 콘솔로그로 출력되는 걸 볼 수 있다. </p>
+<p>이벤트 버블링은 브라우저가 이벤트를 감지하는 작동방식 때문에 발생한다. 브라우저는 특정 요소에서 이벤트가 발생 했을 때 그 이벤트를 화면 최상위 요소가지 이벤트를 전달 하도록 되어있다. 따라서 여기서도 최상위 요소인 class가 ‘td3’인 div 태그까지 전달 되는 것이다. </p>
+<h2 id="이벤트-캡쳐"><a href="#이벤트-캡쳐" class="headerlink" title="이벤트 캡쳐"></a>이벤트 캡쳐</h2><p>이벤트 캡쳐는 이벤트 버블링과는 반대로 진행되는 이벤트 전파 방식이다.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"td3"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"td2"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"td1"</span>&gt;</span></span><br><span class="line">            sdj</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> divs = <span class="built_in">document</span>.querySelectorAll(<span class="string">'div'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">capturing</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.currentTarget.className);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">divs.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">div</span>) </span>&#123;</span><br><span class="line">  div.addEventListener(<span class="string">'click'</span>, capturing, &#123;</span><br><span class="line">		capture: <span class="literal">true</span> <span class="comment">// default 값은 false.</span></span><br><span class="line">	&#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>addEventListener 객체에 capture 값을 true로 설정하면 이벤트 버블링과 반대로 작동하여 이벤트를 탐색한다. 따라서 위의 코드의 td1 class를 클릭하면 아래와 같은 결과값을 얻는다.<br><img src="/images/capturing.png" alt="이벤트 캡쳐링"></p>
+<h2 id="event-stopPropagation"><a href="#event-stopPropagation" class="headerlink" title="event.stopPropagation()"></a>event.stopPropagation()</h2><p>event.stopPropagation() API를 사용하면 해당 이벤트가 전파 되는 것을 막는다. 따라서 이벤트 버블링의 경우 요소에 클릭 이벤트를 주었을 때 해당 요소에만 이벤트를 발생 시키고 상위 요소로의 이벤트 전달을 막는다.<br>따라서 위 이벤트 캡쳐링 예제의 코드에 e.stopPropagation() api를 추가하면 <code>td3</code>만 출력 되게 된다. </p>
+<h2 id="event-preventDefault"><a href="#event-preventDefault" class="headerlink" title="event.preventDefault()"></a>event.preventDefault()</h2><p>이벤트 본래의 동작이란 예를 들어 앵커 태그의 클릭하면 페이지를 이동하기, 텍스트 상자에서의 키 누르기라면 문자를 반영하기 등 브라우저 표준으로 정해진 동작이다. 이벤트 객체의 event.preventDefault()를 사용하면 이 동작을 취소할 수 있다.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>outer 요소<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">"inner"</span> <span class="attr">href</span>=<span class="string">"https://www.google.com"</span>&gt;</span>inner 요소<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'inner'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.alert(<span class="string">'이벤트 발생'</span>)</span><br><span class="line">    e.preventDefault();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>위 코드를 실행하면 alert 창만 실행되고 페이지가 이동되지 않는 것을 알 수있다. </p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>사실 이 부분은 프론트엔드의 면접은행에 많이 나오는 부분이라 언제고 정리를 해서 공부를 해야 겠다 생각하고 있었는데 캡틴판교님의 블로그를 얼씬 거리다가 때 마침 정리를 하게 되었다. 사실 이 분의 글로 대부분의 내용을 정리했다고 봐도 과언이 아닐 것이다. 정리를 하면서도 헷갈리는 부분이 없지 않아 있지만 다시 글을 보며 스터디 그룹분들과 토론 해 봐야 겠다. </p>
+<h2 id="참조글"><a href="#참조글" class="headerlink" title="참조글"></a>참조글</h2><p><a href="https://joshua1988.github.io/web-development/javascript/event-propagation-delegation/#%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%B2%84%EB%B8%94%EB%A7%81---event-bubbling" target="_blank" rel="noopener">캡틴판교님의 블로그</a><br><a href="http://www.yes24.com/24/goods/44324818" target="_blank" rel="noopener">자바스크립트 마스터북</a></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/frontend/">#frontend</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Chang Hao">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2018/06/05/frontend/event/">javascript  이벤트</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/02/backend/vowels_count/">vowels_count</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/31/backend/findevenIndex/">findEvenIndex</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/26/backend/positiveSum/">PositiveSum array</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/24/backend/friendsOrFoe/">friendsOrfoe</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/Mrchanghao" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:lnl2048@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
