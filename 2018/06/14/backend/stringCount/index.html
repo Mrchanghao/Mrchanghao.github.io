@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Codewar이메일 확인 중 코드워에서 오늘의 문제라고 보내 준 문제가 와서 간만에 알고리즘이나 한번 풀어볼까 하면서 도전한 문제다. 코드워에서 역시 내 수준을 아직 높게 봐주지 않아 다행인지 그렇게 어려운 문제가 아니라서 다행이도 쉬운 문제라 푸는데 걸리는 시간은 3">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Chang Hao">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="stringCount"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Chang Hao의 Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>stringCount - Chang Hao의 Blog</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Chang Hao의 Blog">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Chang Hao의 Blog">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/frontend" 
+                    title="frontend">
+                    frontend
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/backend" 
+                    title="backend">
+                    backend
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/Music" 
+                    title="Music">
+                    Music
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">stringCount</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-06-14</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a> <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/알고리즘/">#알고리즘</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Codewar"><a href="#Codewar" class="headerlink" title="Codewar"></a>Codewar</h1><p>이메일 확인 중 코드워에서 오늘의 문제라고 보내 준 문제가 와서 간만에 알고리즘이나 한번 풀어볼까 하면서 도전한 문제다. 코드워에서 역시 내 수준을 아직 높게 봐주지 않아 다행인지 그렇게 어려운 문제가 아니라서 다행이도 쉬운 문제라 푸는데 걸리는 시간은 30분도 걸리지 않았다. </p>
+<h1 id="StringCount"><a href="#StringCount" class="headerlink" title="StringCount"></a>StringCount</h1><p>문제 이름은 내 임의대로 붙여 보았다. 이메일로 온 거에는 그냥 challenge 문제라고만 있어서 그냥 인스트럭션만 보고 내 임의대로 적었다. 일단 문제는 다음과 같다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">strCount(<span class="string">'hello'</span>, <span class="string">'e'</span>)  <span class="comment">// 1</span></span><br><span class="line">strCount(<span class="string">'hello'</span>, <span class="string">'l'</span>) <span class="comment">// 2</span></span><br><span class="line">strCount(<span class="string">'recursive'</span>, <span class="string">'e'</span>) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
+<p>즉 첫번째 인자에 원하는 문자열이 들어가고 두번째 인자로 한 글자가 들어가는데 그 두번째 인자가 첫번째 문자열에 몇개나 들어가는지 맞추는 함수를 작성하라는 문제이다.<br>사실 문자열 메소드를 몇개 알면 그리 어려운 문제가 아닐 거라는 건 바로 알 수 있다. 이건 알고리즘 문제라기 보단 그냥 자바스크립트 실력을 알아보는 문제 정도의 난이도 같다. </p>
+<h1 id="내-풀이법"><a href="#내-풀이법" class="headerlink" title="내 풀이법"></a>내 풀이법</h1><p>아래의 답은 내가 코드워에 작성한 방법이다. 일단 주어진 문자열을 <code>split</code>메소드를 이용하여 한글자 씩 나눈 배열 형식으로 만든다. 그 다음 생성한 어레이에 filter 메소드를 이용하여 두번째 인자와 비교하는 어레이를 만든다음 그 어레이의 길이 값을 리턴한다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strCount</span>(<span class="params">str, letter</span>)</span>&#123;  </span><br><span class="line">  <span class="comment">//code here</span></span><br><span class="line">  <span class="keyword">var</span> arr = str.split(<span class="string">''</span>);</span><br><span class="line">  <span class="keyword">var</span> count = arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">el</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> el === letter </span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> count.length</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>코드워 자체 테스트에서는 문제가 없었다. 하지만 언제나 내 코드가 완벽할 수는 없는 법이다. 그리고 나 빼고 전 세계의 천재들이 모여 있는 코드워에는 역시 내가 상상도 못한 답안을 작성하신 분들이 엄청나게 많았다. ㅠㅠ </p>
+<h1 id="다른-분들의-풀이법"><a href="#다른-분들의-풀이법" class="headerlink" title="다른 분들의 풀이법"></a>다른 분들의 풀이법</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strCount</span>(<span class="params">str, letter</span>)</span>&#123;  </span><br><span class="line">  <span class="keyword">return</span> str.split(letter).length<span class="number">-1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ㄷㄷㄷ 이건 생각도 못 했다. 두번째 인자를 이용하여 <code>split</code>메소드에 이용하는 방법은 생각도 못 하고 있었다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strCount</span>(<span class="params">str, letter</span>)</span>&#123;  </span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; str.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (str[i] == letter)</span><br><span class="line">      count++;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>예전의 내가 생각할 방법 같다. 사실 코드워에서 문제를 만들었을 당시에는 이 방법이 주를 이루었을 테지만 요새는 filter를 이용한 강좌나 블로그 글들이 워낙 많아서 사실 그렇게 복잡하게 생각할 필요는 없을 것 같다. 하지만 이 방법론 자체가 생각이 나야 결국 이 문제를 이해 했다는 뜻이 된다. 그런 면에서는 좋은 코드라고 생각한다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strCount</span>(<span class="params">str, letter</span>)</span>&#123;  </span><br><span class="line">  <span class="keyword">return</span> str.split(<span class="string">''</span>).filter(<span class="function"><span class="params">c</span> =&gt;</span> c == letter).length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>내 코드를 훨씬 더 간결하게 작성한 코드다. 이런 리팩토링 자체는 언제나 보고 배워야 할 것이다. </p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>문제 자체가 그리 어려운 문제가 아니라서 시간도 오래 걸리는건 아니였지만 역시 다른 사람들의 코드를 보고 생각하는 부분도 중요한 것 같다. 그리고 이 코드에 정규표현식 적용한 답안이 있는데<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strCount</span>(<span class="params">str, letter</span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">return</span> str.length - str.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(letter, <span class="string">"gi"</span>), <span class="string">''</span>).length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>와 이건 도대체 뭔 말인지 모르겠다…. </p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/backend/">#backend</a> <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/알고리즘/">#알고리즘</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Chang Hao">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2018/06/14/backend/stringCount/">stringCount</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/14/frontend/hoisting/">자바스크립트의 호이스팅</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/05/frontend/event/">javascript  이벤트</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/02/backend/vowels_count/">vowels_count</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/31/backend/findevenIndex/">findEvenIndex</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/Mrchanghao" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:lnl2048@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
