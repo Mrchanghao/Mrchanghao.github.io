@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="자바스크립트에서의 소수점 계산오늘 희안한 문제를 하나 봤다. 면접 문제라는데 대체 왜 이런 기본적인 문제가 면접 질문 은행에 올라와 있을까 하는 궁금증에 혹시나 하고 콘솔창에 타이핑 해 봤는데 내 예상과는 전혀 다른 값이 나와 버렸다. 
+1console.log(0.1 ">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Chang Hao">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="소수점 더하기"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Chang Hao의 Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>소수점 더하기 - Chang Hao의 Blog</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Chang Hao의 Blog">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Chang Hao의 Blog">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/frontend" 
+                    title="frontend">
+                    frontend
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/backend" 
+                    title="backend">
+                    backend
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/Music" 
+                    title="Music">
+                    Music
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">소수점 더하기</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-06-24</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/frontend/">#frontend</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="자바스크립트에서의-소수점-계산"><a href="#자바스크립트에서의-소수점-계산" class="headerlink" title="자바스크립트에서의 소수점 계산"></a>자바스크립트에서의 소수점 계산</h1><p>오늘 희안한 문제를 하나 봤다. 면접 문제라는데 대체 왜 이런 기본적인 문제가 면접 질문 은행에 올라와 있을까 하는 궁금증에 혹시나 하고 콘솔창에 타이핑 해 봤는데 내 예상과는 전혀 다른 값이 나와 버렸다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">0.2</span> == <span class="number">0.3</span>) <span class="comment">// true or false ???</span></span><br></pre></td></tr></table></figure>
+<p>역시 나 같은 듣보 레벨의 개발자는 이제 뭐 함부로 예상하지를 못하겠다. 내 예상은 당연히 <code>true</code> 였지만 나온 값은 <code>false</code>였다. 왜 그럴까 하는 궁금증에 값 자체를 콘솔에 찍어 봤다.<br>그런데 나온 값이 터무니 없었다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">0.2</span>) <span class="comment">// 0.30000000000000004 </span></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">브라우저 상 말고 노드 REPL에서도 마찬가지 인가 하는 생각이 들어 똑같이 입력해 봤다. 역시나 똑같은 값이 나왔다. 헐.... ㄷㄷㄷ</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">공부 헛했다... 여태껏.. 이런 기본적인 덧셈 원칙도 모르고 있었다니.. 그렇다면 좀 더 숫자를 올려 보자 </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2.1</span> + <span class="number">0.2</span>);</span><br><span class="line"><span class="comment">// 2.3000000000000003 </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">3.1</span> + <span class="number">0.2</span>);</span><br><span class="line"><span class="comment">// 3.3000000000000003</span></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">음... 숫자 값 하나가 `</span><span class="number">0.</span>*<span class="string">` 이면 저런 이상한 결과가 나오는군... 그래서 다시 실험 시작</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">2.2</span>); <span class="comment">// 2.4000000000000003</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">3.2</span>) <span class="comment">//  3.3000000000000003</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">4.2</span>) <span class="comment">// 4.3 --&gt; ?????</span></span><br></pre></td></tr></table></figure>
+<p>값이 일정 이상 넘어가자 이제는 정상 결과를 반환한다. 와 대체 무슨 원리로 이렇게 되는 거지? 그래서 결국 전지전능한 구글신께 도움을 요청했고 다음과 같은 글을 찾을 수 있었다. </p>
+<p><a href="http://blog.blakesimpson.co.uk/read/61-fix-0-1-0-2-0-300000004-in-javascript" target="_blank" rel="noopener">Fix “0.1 + 0.2 = 0.300000004” in JavaScript</a></p>
+<p>이 글에 의하면 자바스크립트는 IEEE 754 standard라는 기준을 사용하기 때문에 부동소수점 계산을 수행 할때 정밀도 오류가 발생한단다… 헐… </p>
+<p>일단 태생부터가 문돌이인 나로서는 일단 저 기준 자체도 첨 들어봤다. 검색해보니 위키님께서 잘 정리해 놓으셨다.. 하지만 역시나 이해가 되지 않는 글이다…ㅠㅠ <br><br>그냥 이 오류를 외워 버려야 겠다. </p>
+<h2 id="오류-해결법"><a href="#오류-해결법" class="headerlink" title="오류 해결법"></a>오류 해결법</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">0.1</span> + <span class="number">0.2</span>).toFixed(<span class="number">1</span>) <span class="comment">// 0.3</span></span><br></pre></td></tr></table></figure>
+<p><code>toFixed</code> 메서드를 이용하여 소수점을 고정 시켜 버렸다. </p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>언제나 그렇지만 공부를 한다고 하는데도 어느 순간에 뿅하고 내가 모르던 문법적인 규칙이나 오류가 나타나시는 자바스크립트다. ㅎㅎ 그냥 더 열심히 하라는 신의 계시로 받아들여야 겠지… </p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/frontend/">#frontend</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Chang Hao">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2018/06/24/frontend/javascriptTip/">소수점 더하기</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/14/backend/stringCount/">stringCount</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/14/frontend/hoisting/">자바스크립트의 호이스팅</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/05/frontend/event/">javascript  이벤트</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/02/backend/vowels_count/">vowels_count</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/Mrchanghao" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:lnl2048@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
