@@ -10,7 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="간단한 테스트 파일오늘은 제발 좀 하자 블로그/…ㅠㅠ">
+        <meta name="description" content="오널의 알고리즘 문제매개변수로 String이 주어지면 중복된 char가 없는 가장 긴 서브스트링 (substring)의 길이를 찾는 문제이다. 내가 평소에 구독하는 매일프로그래밍이라는 곧에서 매주 하나씩 겁나 어려운 문제를 하나씩 보내 주는데 이걸 풀어 보려고 한다. ">
     
 
     <!--Author-->
@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="테스트 파일"/>
+        <meta property="og:title" content="중복된 char가 없는 가장 긴 서브스트링 (substring)의 길이"/>
     
 
     <!--Open Graph Description-->
@@ -42,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>테스트 파일 - Chang Hao의 Blog</title>
+    <title>중복된 char가 없는 가장 긴 서브스트링 (substring)의 길이 - Chang Hao의 Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -110,8 +110,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">테스트 파일</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-05-04</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">중복된 char가 없는 가장 긴 서브스트링 (substring)의 길이</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-07-02</p>
         </div>
     </div>
 
@@ -131,19 +131,25 @@
                     
                         <div class="tags-container-vertical">
                             <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/Music/">#Music</a>
+                                <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a> <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/알고리즘/">#알고리즘</a>
                             </div>
                         </div>
                     
 
                     <!-- Main Post Content -->
-                    <h1 id="간단한-테스트-파일"><a href="#간단한-테스트-파일" class="headerlink" title="간단한 테스트 파일"></a>간단한 테스트 파일</h1><p>오늘은 제발 좀 하자 블로그/…ㅠㅠ</p>
+                    <h1 id="오널의-알고리즘-문제"><a href="#오널의-알고리즘-문제" class="headerlink" title="오널의 알고리즘 문제"></a>오널의 알고리즘 문제</h1><p>매개변수로 String이 주어지면 중복된 char가 없는 가장 긴 서브스트링 (substring)의 길이를 찾는 문제이다. 내가 평소에 구독하는 매일프로그래밍이라는 곧에서 매주 하나씩 겁나 어려운 문제를 하나씩 보내 주는데 이걸 풀어 보려고 한다. 사실 제대로 풀어 본건 이번이 처음이다. </p>
+<h1 id="내-해결법"><a href="#내-해결법" class="headerlink" title="내 해결법"></a>내 해결법</h1><p>이번 문제를 푼 거는 사실 운이나 다름 없었다. 특히 ES6 이상에서 부터 생겨난 스페인 Set 덕분이었다. 이 기본적으로 제공되는 자료 구조 덕분에 쉽게 문제 답을 구할 수 있었다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">maxSubStr</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> strArr = str.split(<span class="string">''</span>);</span><br><span class="line">    <span class="keyword">let</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>(strArr);</span><br><span class="line">	<span class="keyword">return</span> set.size</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>일단 <code>Set</code>은 중복되는 value를 가지지 않는 데이터 구조 이므로 따로 반복문을 두번 씩 돌려서 알고리즘을 복잡하게 만들 필요가 없었다. 그저 주어진 매개변수를 배열로 만들고 그 배열로 Set을 생성한 다음 size 속성만 리턴하면 쉽게 구할 수 있다.</p>
+<h1 id="테스트"><a href="#테스트" class="headerlink" title="테스트"></a>테스트</h1><p>이 방식으로 하면 너무 쉬운 문제라 양심상 jest를 이용해서(사실 jest외 에는 별로 써본 경험이 없다..ㅠㅠ) 테스트 코드도 돌려 봤다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> maxSubStr = <span class="built_in">require</span>(<span class="string">'./index.js'</span>);</span><br><span class="line"></span><br><span class="line">test(<span class="string">'maxSubStr 함수가 존재한다'</span>, () =&gt; &#123;</span><br><span class="line">    expect(<span class="keyword">typeof</span> maxSubStr).toEqual(<span class="string">'function'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  test(<span class="string">'함수 예상 값들은'</span>, () =&gt; &#123;</span><br><span class="line">    expect(maxSubStr(<span class="string">'aabb'</span>)).toEqual(<span class="number">2</span>);</span><br><span class="line">    expect(maxSubStr(<span class="string">'vbvbaabb'</span>)).toEqual(<span class="number">3</span>);</span><br><span class="line">    expect(maxSubStr(<span class="string">'1'</span>)).toEqual(<span class="number">1</span>);</span><br><span class="line">    expect(maxSubStr(<span class="string">'12'</span>)).toEqual(<span class="number">2</span>);</span><br><span class="line">    expect(maxSubStr(<span class="string">'aaaaaa'</span>)).toEqual(<span class="number">1</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></p>
+<p>결과는 모두 통과~~~^^<br><img src="/images/jest.test.png" alt="테스트 결과"></p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>사실 다른 방식으로 푸신 분들의 코드도 코드워 처럼 공유하고 싶지만 검색해 보니 자바스크립트로 푸신 분이 없더라는…ㅠㅠ<br>스택오버플로우에서 한번 검색해 보고 다시 블로그를 수정해야 겠다.</p>
 
                     
                     <!-- Tags Bottom -->
                     
                         <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Music/">#Music</a>
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/backend/">#backend</a> <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/알고리즘/">#알고리즘</a>
                         </div>
                     
 
