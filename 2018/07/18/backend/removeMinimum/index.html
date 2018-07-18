@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="오늘의 코드워매개변수로 숫자 엘리먼트로 이루어진 어레이를 주어지고 그 어레이에서 가장 작은 수를 골라 제거한 다음 나머지 엘리먼트들을 순서 그대로 리턴하게 하는 알고리즘을 작성하는 문제다. 처음에는 sort로 정렬한 다음 첫번째 엘리먼트만 제거하면 되겠지 하는 얕은 생">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Chang Hao">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="removeMinimum"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Chang Hao의 Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>removeMinimum - Chang Hao의 Blog</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Chang Hao의 Blog">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Chang Hao의 Blog">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/frontend" 
+                    title="frontend">
+                    frontend
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/backend" 
+                    title="backend">
+                    backend
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/Music" 
+                    title="Music">
+                    Music
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">removeMinimum</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-07-18</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a> <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/알고리즘/">#알고리즘</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="오늘의-코드워"><a href="#오늘의-코드워" class="headerlink" title="오늘의 코드워"></a>오늘의 코드워</h1><p>매개변수로 숫자 엘리먼트로 이루어진 어레이를 주어지고 그 어레이에서 가장 작은 수를 골라 제거한 다음 나머지 엘리먼트들을 순서 그대로 리턴하게 하는 알고리즘을 작성하는 문제다. 처음에는 <code>sort</code>로 정렬한 다음 첫번째 엘리먼트만 제거하면 되겠지 하는 얕은 생각으로 빨리 작성했다가 코드워 자체 테스트에서 fail한 다음 왜 그럴까 생각 해 보고 문제를 다시 읽어보니 엘리먼트의 순서가 바뀌면 안 되었다. 그래서 고민을 하다가 결국 스택오버플로우에서 생각 해보니 <code>Math.min</code> 메서드 였다. 그걸로 가장 작은 엘리먼트 값을 찾고 그걸 어레이에서 제거하는 방식으로 해 보자 해서 일단 코드를 작성했다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeMinimum</span>(<span class="params">numbers</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> data = <span class="built_in">Math</span>.min(...numbers); <span class="comment">// 스프레드 오퍼레이터는 참 편하다..ㅎㅎ</span></span><br><span class="line">    <span class="keyword">let</span> index = numbers.indexOf(data);</span><br><span class="line">    <span class="keyword">if</span>(index &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">        numbers.splice(index, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> numbers;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>이 방식으로 하면 일단 샘플 테스트는 통과가 된다. 하지만 답안 제출을 하면서 한가지 테스트를 더 하게 되는데 바로 요즘 react공부하면서 가장 많이 듣게 되는 방식이다. Don’t mutate the data!! 원래의 매개변수를 변경하면 안된다는 것인데, 이 test가 최종 테스트에 있었다. 그러다 보니 논리적으론 맞는데.. 최종 테스트에서 계속 실패하게 되었다.<br>결국 다시 문제를 읽고 매개변수를 변경하면 안된다는 지시문을 발견하고 아래 코드 처럼 다시 변경했다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeSmallest</span>(<span class="params">numbers</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = <span class="built_in">Array</span>.from(numbers);</span><br><span class="line">    <span class="keyword">let</span> data = <span class="built_in">Math</span>.min(...arr);</span><br><span class="line">    <span class="keyword">let</span> index = numbers.indexOf(data);</span><br><span class="line">    <span class="keyword">if</span>(index &gt;  <span class="number">-1</span>) &#123;</span><br><span class="line">        arr.splice(index, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>주어진 <code>numbers</code> 매개변수를 <code>Array.from()</code>메소드를 이용해서 복제하고 그 복제한 어레이만 이용해서 문제를 풀었다. 최종 테스트에서는 역시 통과!!!</p>
+<h1 id="능력자분들의-코드"><a href="#능력자분들의-코드" class="headerlink" title="능력자분들의 코드"></a>능력자분들의 코드</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeSmallest</span>(<span class="params">numbers</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> min = <span class="built_in">Math</span>.min(...numbers);</span><br><span class="line">    <span class="keyword">return</span> numbers.filter(<span class="function">(<span class="params">num, idx, arr</span>) =&gt;</span> idx !== arr.indexOf(min));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>filter</code>메소드를 이용해서 푼 방식인데 내 수준에서는 가장 깔끔하고 이해하기도 편했다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeSmallest</span>(<span class="params">numbers</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> indexOfMin = numbers.indexOf(<span class="built_in">Math</span>.min(...numbers));</span><br><span class="line">  <span class="keyword">return</span> [...numbers.slice(<span class="number">0</span>, indexOfMin), ...numbers.slice(indexOfMin + <span class="number">1</span>)];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>가장 많은 칭찬을 받은 코드다. <code>slice</code>와 스프레드오퍼레이터로 <code>concat</code>메소드를 재현했다. </p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>음.. 역시 ES6가 도입되고 나니 알고리즘 문제 해결 방식 자체도 엄청 나게 편해 진다는 걸 느끼고 있다. 그건 사실 다른 문제 해결 부분에서는 그렇게 좋지 않겠지만 일단 접근방식만 안 다는 걸로도 일단 계단을 오르고 있다는 거니까 지금 나 정도의 수준에서는 일단 만족하고 더 높은 단계에서는 진짜 기본적인 문법만으로 해결이 가능하게 해야 하겠다. </p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/backend/">#backend</a> <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/알고리즘/">#알고리즘</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Chang Hao">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2018/07/18/backend/removeMinimum/">removeMinimum</a>
+        </p>
+    
+        <p>
+            <a href="/2018/07/14/backend/vowelIndex/">VowelIndex?</a>
+        </p>
+    
+        <p>
+            <a href="/2018/07/04/backend/orderdArray/">Are the numbers in order?</a>
+        </p>
+    
+        <p>
+            <a href="/2018/07/02/backend/subStr/">중복된 char가 없는 가장 긴 서브스트링 (substring)의 길이</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/29/frontend/node/">node와 npm 그리고 ES6 환경 설정</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/Mrchanghao" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:lnl2048@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
