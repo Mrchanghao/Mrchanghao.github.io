@@ -10,8 +10,8 @@
 
     <!--Description-->
     
-        <meta name="description" content="오늘의 코드워코드워에서 메일로 문제가 와서 심심해서 풀어봤다. 역시 코드워의 인공지능님이 내 수준을 헤아려 주셔서 그런지 어려운 문제가 오지 않아 쉽게 풀 수 있는 문제였다. 
-어레이의 숫자들 중에 양수들의 합만 구하는 문제였다. 뭐 이거야 if문과 for문만 돌리면 ">
+        <meta name="description" content="문제 설명매주 오는 실리콘 밸리 패키지 문제다. 요즘 블로그에 뭘 올리지를 않아서 심심하던 중에 코드워 문제도 올리고 아예 이 문제도 풀어서 올려야 겠다는 생각으로 이메일을 뒤져서 한번 풀어봤다. 
+매개변수로 하나는 정수로 된 배열, 하나는 양수 N이 주어지면  N번째">
     
 
     <!--Author-->
@@ -21,7 +21,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="PositiveSum array"/>
+        <meta property="og:title" content="N번째로 큰 배열 원소 찾기"/>
     
 
     <!--Open Graph Description-->
@@ -43,7 +43,7 @@
 
     <!-- Title -->
     
-    <title>PositiveSum array - Chang Hao의 Blog</title>
+    <title>N번째로 큰 배열 원소 찾기 - Chang Hao의 Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -111,8 +111,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">PositiveSum array</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-05-26</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">N번째로 큰 배열 원소 찾기</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-07-24</p>
         </div>
     </div>
 
@@ -132,28 +132,26 @@
                     
                         <div class="tags-container-vertical">
                             <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
+                                <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a> <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/알고리즘/">#알고리즘</a>
                             </div>
                         </div>
                     
 
                     <!-- Main Post Content -->
-                    <h1 id="오늘의-코드워"><a href="#오늘의-코드워" class="headerlink" title="오늘의 코드워"></a>오늘의 코드워</h1><p>코드워에서 메일로 문제가 와서 심심해서 풀어봤다. 역시 코드워의 인공지능님이 내 수준을 헤아려 주셔서 그런지 어려운 문제가 오지 않아 쉽게 풀 수 있는 문제였다. </p>
-<p>어레이의 숫자들 중에 양수들의 합만 구하는 문제였다. 뭐 이거야 if문과 for문만 돌리면 금방이니까 알고리즘 코드는 금방 짤 수 있겠다.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">positiveSum</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> total = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i, l = arr.length; i &lt; l; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[i] &gt;= <span class="number">0</span> ) </span><br><span class="line">        total += arr[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> total;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>코드워에서 샘플 테스트를 실행 해 보니 금방 통과 완료!! </p>
-<p>바로 제출 했다. </p>
-<h2 id="천재들의-코드"><a href="#천재들의-코드" class="headerlink" title="천재들의 코드"></a>천재들의 코드</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">positiveSum</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">return</span> arr.reduce(<span class="function">(<span class="params">a,b</span>)=&gt;</span> a + (b &gt; <span class="number">0</span> ? b : <span class="number">0</span>),<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">positiveSum</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arr.filter(<span class="function"><span class="params">x</span> =&gt;</span> x&gt;=<span class="number">0</span>).reduce(<span class="function">(<span class="params">a, c</span>) =&gt;</span> a + c, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>사실 처음에는 나도 reduce를 사용 해 볼까 했는데 그러려면 사실 시간이 더 오래 걸릴 것 같아서 그냥 for문을 이용했다..ㅋㅋㅋ (핑계가 아니고 지금 나갈 준비 해야 하는데 블로그 쓰고 있는 중….) </p>
-<p>오잉? 필터는 생각 못 했다… reduce 함수 블록 안에서만 어케 할 까 고민햇는데… 먼저 filter로 새 어레이 만들고 그 안에서 작업하는게 더 효율적이겠구나… </p>
-<p>역시나 천재분들의 코드를 리뷰하면 많은 점을 배울 수 있다.. 그런데 써 먹질 못한다. 아오… .</p>
-<p>일단 map, filter, reduce에 익숙해져야 하겠다. </p>
-<h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>일단 알고리즘 문제들을 푸는 것은 즐겁고 익숙 해지기 시작했는데 시간복잡도나 공간 복잡도에 대한 개념 자체는 블로그 글들을 읽어봐도 영 감이 잡히지 않는다. 결국, 비전공자의 약점이 이런 것인가….<br>틈틈이 알고리즘 개념에 대한 공부 하면서 자료 수집하고 글로 정리를 해야 되겠다. </p>
+                    <h1 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h1><p>매주 오는 실리콘 밸리 패키지 문제다. 요즘 블로그에 뭘 올리지를 않아서 심심하던 중에 코드워 문제도 올리고 아예 이 문제도 풀어서 올려야 겠다는 생각으로 이메일을 뒤져서 한번 풀어봤다. </p>
+<p>매개변수로 하나는 정수로 된 배열, 하나는 양수 N이 주어지면  N번째로 큰 배열 원소를 찾는 문제이다</p>
+<h1 id="문제-풀이와-테스트"><a href="#문제-풀이와-테스트" class="headerlink" title="문제 풀이와 테스트"></a>문제 풀이와 테스트</h1><p>역시나 자바스크립트라서 그런지 <code>sort</code> 메서드를 이용하면 금방 해결이 되었다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">nTh</span>(<span class="params">arr, n</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 가장 큰수 순서대로 sorting 한다</span></span><br><span class="line">    <span class="keyword">var</span> sortedArr = arr.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> b - a</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> sortedArr[n - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>코드워와 다르게 실리콘 밸리 패키지 문제는 해답과 테스트를 알수가 없어서 따로 테스트 코드를 작성해서 jest로 돌려 봤다.<br><img src="/images/findNth.png" alt="test code"></p>
+<p>테스트는 결과값 비교만 하는 코드로 돌려 봤을 때는 크게 이상이 없어 보인다.</p>
+<p><img src="/images/findNthresult.png" alt="test result"></p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>실리콘 밸리 패키지 문제는 수준이 높을 때도 많지만 일단 다른 능력자 분들의 코드를 볼 방법이 없다. 게다가 javascript로 작성하는 분들이 외국에 비해 많지도 않고 대부분 자바 능력자 분들이 많은 것 같다. 그것 만 빼면 나쁘지 않은 것 같다. </p>
 
                     
                     <!-- Tags Bottom -->
                     
                         <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/backend/">#backend</a> <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/알고리즘/">#알고리즘</a>
                         </div>
                     
 
