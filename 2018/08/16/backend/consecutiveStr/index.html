@@ -10,8 +10,8 @@
 
     <!--Description-->
     
-        <meta name="description" content="Square Every Digit오늘의 코드워 문제다 이제 별 6단계로 올라 갈 날도 멀지 않은 것 같다. 프로필을 보니 7개 랭크의 문제는 거의 다 푼것 같다. 
-오늘 문제는 역시 그렇게 어렵지 않다.함수 인자로 숫자가 주어지면 그 숫자를 모두 한 자리 수로 나눈다음">
+        <meta name="description" content="CodeWar그 동안 날씨 탓이 좀 있고 그랬는지 슬럼프가 오고 코딩은 조금씩 해 봤지만 알고리즘은 조금 건드리기가 싫어서 건드리지도 않았다. 게다가 내가 등급업이 됬는지 나오는 문제가 내 머리로는 풀기가 조금 어려웠다 아니 너무 어려웠다..ㅠㅠ 
+일단 오늘 문제 역시">
     
 
     <!--Author-->
@@ -21,7 +21,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Square Every Digit"/>
+        <meta property="og:title" content="Consecutive strings"/>
     
 
     <!--Open Graph Description-->
@@ -43,7 +43,7 @@
 
     <!-- Title -->
     
-    <title>Square Every Digit - Chang Hao의 Blog</title>
+    <title>Consecutive strings - Chang Hao의 Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -111,8 +111,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">Square Every Digit</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-07-24</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Consecutive strings</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-08-16</p>
         </div>
     </div>
 
@@ -138,29 +138,19 @@
                     
 
                     <!-- Main Post Content -->
-                    <h1 id="Square-Every-Digit"><a href="#Square-Every-Digit" class="headerlink" title="Square Every Digit"></a>Square Every Digit</h1><p>오늘의 코드워 문제다 이제 별 6단계로 올라 갈 날도 멀지 않은 것 같다. 프로필을 보니 7개 랭크의 문제는 거의 다 푼것 같다. </p>
-<p>오늘 문제는 역시 그렇게 어렵지 않다.<br>함수 인자로 숫자가 주어지면 그 숫자를 모두 한 자리 수로 나눈다음 그 각 숫자 마다의 제곱 값을 다시 리턴하면 된다. 즉, 인풋과 아웃풋은 아래와 같다. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">input: 9112 --&gt; output: 81114   // 9 * 9,  1 * 1, 1*1, 2 * 2, 해서 나온 값이 되는다.</span><br><span class="line">input: 236 --&gt; output: 4936</span><br></pre></td></tr></table></figure>
-<h1 id="내-해결-방법"><a href="#내-해결-방법" class="headerlink" title="내 해결 방법"></a>내 해결 방법</h1><p>사실 이 방법은 자바스크립트가 아니고선 조금 힘들 수도 있을 듯하다. 타입 변화가 자유로울 수 있는 자바스크립트니까 이렇게 쉽게 풀릴 수 있었다고 생각된다. </p>
-<pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">squareDigits</span>(<span class="params">num</span>)</span>{
-    <span class="keyword">var</span> arr = num.toString().split(<span class="string">''</span>);
-    <span class="keyword">var</span> result = arr.map(<span class="function"><span class="params">el</span> =&gt;</span> {
-        <span class="keyword">return</span> el * el
-    }).join(<span class="string">''</span>)
-    <span class="keyword">return</span> <span class="built_in">Number</span>(result);
-}
-<span class="comment">// 다시 보니 체인룰로 리팩 할 수 있었다/.... </span>
-<span class="function"><span class="keyword">function</span> <span class="title">squareDigits</span>(<span class="params">num</span>)</span>{
-    <span class="keyword">var</span> result = num.toString().split(<span class="string">''</span>).map(<span class="function"><span class="params">el</span> =&gt;</span> {
-        <span class="keyword">return</span> el * el
-    }).join(<span class="string">''</span>)
-    <span class="keyword">return</span> <span class="built_in">Number</span>(result);
-    <span class="comment">// return parseInt(result);</span>
-}
-</code></pre>
-<p>일단 코드워 자체 테스트는 통과 되서 답안을 최종적으로 리팩토링 해서 제출했다</p>
-<h1 id="능력자-분들의-코드"><a href="#능력자-분들의-코드" class="headerlink" title="능력자 분들의 코드"></a>능력자 분들의 코드</h1><p>사실 이 문제는 내 코드와 그렇게 비교할게 없었다. 타입변환을 <code>parseInt()</code>로 했는가 혹은 <code>Number()</code> 정도의 차이가 가장 컸었다. 매개변수를 루프 돌리거나 나누는 방식은 나와 그렇게 차이가 없었다. </p>
-<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>일단 다른 언어를 배워 본적이 없고 실무에서 일해 본적이 없으니 타입 체크와 변환에 대한 중요성이 얼마나 큰지 내가 느끼지를 못 하고 는 있는 상태지만 일단 이 문제 자체는 JS 자체로는 너무 반칙을 쓴다는 느낌이 드는 문제였다. 이제 타입스크립트에 대해서도 공부를 해야 하긴 하는데 이 부분은 꼭 좀 집고 넘어 가야 할 것 같다. </p>
+                    <h1 id="CodeWar"><a href="#CodeWar" class="headerlink" title="CodeWar"></a>CodeWar</h1><p>그 동안 날씨 탓이 좀 있고 그랬는지 슬럼프가 오고 코딩은 조금씩 해 봤지만 알고리즘은 조금 건드리기가 싫어서 건드리지도 않았다. 게다가 내가 등급업이 됬는지 나오는 문제가 내 머리로는 풀기가 조금 어려웠다 아니 너무 어려웠다..ㅠㅠ </p>
+<p>일단 오늘 문제 역시 마찬가지다 과정 자체는 이해가 됬고 어떻게 분기하고 조건을 어떻게 줘서 연산을 해야 하는지는 머릿 속으로 계산이 나왔는데 그게 코드로 쉽게 짜여 지지가 않으니 더 열받았다. 결국 다른 능력자들의 답 보기 버튼을 누르고 말았다….</p>
+<h1 id="Consecutive-strings"><a href="#Consecutive-strings" class="headerlink" title="Consecutive strings"></a>Consecutive strings</h1><p>문제를 해석 하면 대략 이렇다. strarr이라는 문자열의 집합으로 된 배열이 첫번째 인자로 주어지고, 두번째 인자는 정수 k가 주어진다. 문제는 배열에서 k번째로 연속된 문자열들로 구성된 가장 긴문자열을 반환 하는 것이다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Example: longest_consec([&quot;zone&quot;, &quot;abigail&quot;, &quot;theta&quot;, &quot;form&quot;, &quot;libe&quot;, &quot;zas&quot;, &quot;theta&quot;, &quot;abigail&quot;], 2) --&gt; &quot;abigailtheta&quot;</span><br></pre></td></tr></table></figure>
+<p>예는 위와 같다. 그리고 주어진 문자열의 길이가 0이거나 k가 문자열의 길이보다 길고 k가 0보다 작으면 <code>return &#39;&#39;</code>이 된다. </p>
+<h1 id="내-해결-방식"><a href="#내-해결-방식" class="headerlink" title="내 해결 방식"></a>내 해결 방식</h1><p>첫번째로 우선 <code>sort</code> method로 첫번째 인자의 어레이를 긴 문자열 순서대로 만든 어레이를 만들었다. 그리고 그 배열을 loop해서 k번재 인자까지 추출한 다음 합쳐서 return 했다. 그런데 내가 만든 방식은 도저히 테스트에서 통과가 되지 않았다. 심지어 샘플 테스트에서도 계속해서 fail이 났다. 문법 상으로도 조건 상으로도 문제가 없었는데 뭐가 문제일까 하다 에어콘도 안 나오는 더운 방에서 결국 짜증이 나 버린 나머지 그러면 안 됬지만 다른 능력자들 답안 보기 버튼을 눌러 버리고 말았다. ㅠㅠ</p>
+<h1 id="다른-사람들의-해결-방식"><a href="#다른-사람들의-해결-방식" class="headerlink" title="다른 사람들의 해결 방식"></a>다른 사람들의 해결 방식</h1><figure class="highlight plain"><figcaption><span>lang: javascript</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function longestConsec(strarr, k) &#123;</span><br><span class="line">    var longest = &apos;&apos;;</span><br><span class="line">    for(var i = 0; k &gt; 0 &amp;&amp; i &lt;= strarr.length - k; i++) &#123;</span><br><span class="line">        var tempArr = strarr.slice(i, i+k);</span><br><span class="line">        var tempStr= tempArr.join(&apos;&apos;);</span><br><span class="line">        if(tempStr.length &gt; longest.length) &#123;</span><br><span class="line">            longest = tempStr;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return longest</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>가장 추천수가 높았던 답이다. ES6무문법은 쓰지 않고 일반적인 조건문과 반복문만 사용해서 풀어냈다. 이런 머리를 가진 사람들을 보면 부럽다는 생각만 든다..</p>
+<figure class="highlight plain"><figcaption><span>lang: javascript</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function longestConsec(strarr, k) &#123;</span><br><span class="line">    if(k &lt; 0 || k &gt; strarr.length) &#123;</span><br><span class="line">        return &apos;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    return strarr.reduce((long, item, i) =&gt; &#123;</span><br><span class="line">        const currStr = strarr.slice(i, i + k).join(&apos;&apos;);</span><br><span class="line">        return (currStr.length &gt; long.length) ? currStr : long</span><br><span class="line">    &#125;, &apos;&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>reduce를 이용해서 풀은 답인데 역시 추천 수가 높았다. </p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>따로 나 처럼 정렬 방법을 이용하지 않고 내부에서 어레이 내부 원소들을 각 각 비교하는 방식으로 푸는 방식이 더 효과 적이 었나 보다. 애초에 답안들 자체에 정렬 method를 쓴 답이 하나도 없었다. -.- </p>
+<p>너무 오랜만에 블로그 업데이트 하려니 뭘 어떻게 써야 하는지도 잘 생각이 안 난다. (날씨가 너무 헬이라) </p>
+<p>아무튼 이제 리액트나 리덕스, 또는 node 관련 글도 업데이트를 해야 하는데 다음 주 중에 날 잡고 한번 해야 겠다. </p>
 
                     
                     <!-- Tags Bottom -->
