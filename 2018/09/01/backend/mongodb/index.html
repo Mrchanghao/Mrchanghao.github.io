@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Mongodb요즘 udemy에서 리액트 관련 강의만 zero.cho님 책으로 백엔드 쪽이나 공부해 볼까 하는 중에 오래전에 node 공부 하겠다고 묵혀논 node와 mongodb 관련 수업들이 있어서 수업 내용과 기초 내용들을 정리 해 보려고 한다. 백엔드쪽은 항상 들">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Chang Hao">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Mongodb-1"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Chang Hao의 Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Mongodb-1 - Chang Hao의 Blog</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Chang Hao의 Blog">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Chang Hao의 Blog">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/frontend" 
+                    title="frontend">
+                    frontend
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/backend" 
+                    title="backend">
+                    backend
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags/Music" 
+                    title="Music">
+                    Music
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Mongodb-1</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-09-01</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a> <a class="fw3 ph1 dib" href="/tags/mongodb/">#mongodb</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="Mongodb"><a href="#Mongodb" class="headerlink" title="Mongodb"></a>Mongodb</h1><p>요즘 udemy에서 리액트 관련 강의만 zero.cho님 책으로 백엔드 쪽이나 공부해 볼까 하는 중에 오래전에 node 공부 하겠다고 묵혀논 node와 mongodb 관련 수업들이 있어서 수업 내용과 기초 내용들을 정리 해 보려고 한다. 백엔드쪽은 항상 들어가기 전에 골치가 아픈게 설치하고 세팅해야 할 게 한두가지가 아닌게 정말 골치가 아팠지만 여차저차 구글신의 도움으로 겨우 설치하고 로컬호스트에 연결은 시켜서 사용 할 수 있게 되었다. </p>
+<h1 id="소개"><a href="#소개" class="headerlink" title="소개"></a>소개</h1><p>Mongodb는 C++로 작성된 오픈소스 문서지향(document-oriented)적 데이터 베이스 이며 높은 확장성과 성능을 가지고 있다고 한다. 또한 현존 no-sql 데이터베이스 중 인지도는 1위 이다. </p>
+<h1 id="No-SQL"><a href="#No-SQL" class="headerlink" title="No-SQL"></a>No-SQL</h1><p>No-SQL은 Not only SQL이라고 하며 기존의 MY-SQL처럼 고정된 스키마나 JOIN이 존재하지 않는다. </p>
+<h1 id="DB-sample"><a href="#DB-sample" class="headerlink" title="DB- sample"></a>DB- sample</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;_id&quot;: ObjectId(&quot;5b89c9aa18278e17f9efad27&quot;),</span><br><span class="line">    &quot;name&quot;: &quot;Joe&quot;,</span><br><span class="line">    &quot;createdAt&quot;: 2018-08-26 02:38:58.730</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>여기서 _id, name, createdAt은 데이터의 속성 key이고 오른쪽의 값들은 value를 나타낸다. </p>
+<p>_id 는 12bytes의 hexadecimal 값으로 각 document의 유일함을 나타낸다. </p>
+<p>Mongodb는 같은 데이터 콜렉션 안에서 서로 다른 Schema, 즉 다른 구조를 가지고 있을 수도 있는게 My-SQL과 가장 큰 차이점이다. </p>
+<h1 id="사용법"><a href="#사용법" class="headerlink" title="사용법"></a>사용법</h1><p>우선 터미널에서 기본적인 사용법을 알아보자 </p>
+<p>터미널에서 <code>mongo</code>라고 타이핑하면 몽고 shell이 짜잔 나오면서 몽고DB 사용이 가능해 진다. 현재 사용 중인 데이터를 확인 하려면 <code>db</code>를 입력한다.<br><img src="/images/mongotest.png" alt="test mongodb"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.userdbs.save(&#123;name: &apos;changhao&apos;&#125;)</span><br><span class="line">WriteResult(&#123; &quot;nInserted&quot; : 1 &#125;)</span><br></pre></td></tr></table></figure>
+<p>db.컬렉션.save(document)로 다큐먼트(레코드)를 생성하고 저장한다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.userdbs.update(&#123;name: &apos;changhao&apos;&#125;, &#123;name: &apos;doy&apos;&#125;)</span><br><span class="line">WriteResult(&#123; &quot;nMatched&quot; : 1, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 1 &#125;)</span><br></pre></td></tr></table></figure>
+<p>방금 생성한 다큐먼트의 내용을 변경하는 오퍼레이션이다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.userdbs.findOne(&#123;name: &apos;doy&apos;&#125;);</span><br><span class="line">&#123; &quot;_id&quot; : ObjectId(&quot;5b8a33bb69e69e8926cbd64d&quot;), &quot;name&quot; : &quot;doy&quot; &#125;</span><br></pre></td></tr></table></figure>
+<p>name 속성이 doy인 다큐먼트를 찾는 오퍼레이션이다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.userdbs.find(&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<p>해당 컬렉션의 모든 다큐먼트를 찾는 오퍼레이션이다. </p>
+<h1 id="mongoose"><a href="#mongoose" class="headerlink" title="mongoose"></a>mongoose</h1><p>몽구스는 mongodb와 node.js를 위한 객체 데이터 모델링 라이브러리이다. 데이터간의 관계와 Schema 벨리데이션까지 다양하게 사용할 수 있다. </p>
+<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><p>Mongoose는 노드 기반 라이브러리 이므로 npm 혹은 yarn으로 쉽게 설치 할 수 있다. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save mongoose</span><br></pre></td></tr></table></figure>
+<h2 id="Data-Model-schema"><a href="#Data-Model-schema" class="headerlink" title="Data Model schema"></a>Data Model schema</h2><pre><code class="javascript"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);
+<span class="keyword">const</span> Schema = mongoose.Schema;
+<span class="comment">// console.log(Schema);</span>
+<span class="keyword">const</span> UserSchema = <span class="keyword">new</span> Schema({
+    name: {
+        type: <span class="built_in">String</span>,
+        validate: {
+            validator: <span class="function">(<span class="params">name</span>) =&gt;</span> name.length &gt; <span class="number">2</span>,
+            message: <span class="string">'이름은 적어도 2글자 이상이여야 합니다'</span>
+        },
+        required: [<span class="literal">true</span>, <span class="string">'이름 속성이 필요합니다'</span>]
+    },
+    postCount: <span class="built_in">Number</span>,
+});
+
+
+
+<span class="comment">// 'userdbs'라는 db 모델을 UserSchema를 참조해서 만들어라</span>
+<span class="keyword">const</span> User = mongoose.model(<span class="string">'userdbs'</span>, UserSchema);
+
+<span class="built_in">module</span>.exports = User;
+</code></pre>
+<p>아까 name 속성만 가진 다큐먼트에서 PostCount라는 속성을 추가해서 벨리데이션 및 타입들을 정의해 주었다. </p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>우선은 첮번째로 설치해서 셋업하고 몽고쉘로 데이터 컬렉션 생성까지 하고 mongoose로 프로젝트에서 User.Schema까지 생성해 봤다. </p>
+<p>다음 포스트에서는 udemy에서 배운 대로 이 스키마를 이용해서 CRUD 테스트를 작성해야 겠다. </p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/backend/">#backend</a> <a class="fw3 ph1 dib" href="/tags/mongodb/">#mongodb</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Chang Hao">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2018/09/01/backend/mongodb/">Mongodb-1</a>
+        </p>
+    
+        <p>
+            <a href="/2018/08/16/backend/consecutiveStr/">Consecutive strings</a>
+        </p>
+    
+        <p>
+            <a href="/2018/07/24/backend/findNth/">N번째로 큰 배열 원소 찾기</a>
+        </p>
+    
+        <p>
+            <a href="/2018/07/24/backend/Square_Every_Digit/">Square Every Digit</a>
+        </p>
+    
+        <p>
+            <a href="/2018/07/18/backend/removeMinimum/">removeMinimum</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/Mrchanghao" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:lnl2048@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
